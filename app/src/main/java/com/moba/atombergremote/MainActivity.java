@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
             v.performHapticFeedback(
                     HapticFeedbackConstants.VIRTUAL_KEY);
 
+            showToast("POWER");
+
             sendIr(POWER);
         });
 
@@ -80,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
 
             v.performHapticFeedback(
                     HapticFeedbackConstants.VIRTUAL_KEY);
+
+            showToast("SPEED 1");
 
             sendIr(SPEED1);
         });
@@ -89,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
             v.performHapticFeedback(
                     HapticFeedbackConstants.VIRTUAL_KEY);
 
+            showToast("SPEED 2");
+
             sendIr(SPEED2);
         });
 
@@ -96,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
 
             v.performHapticFeedback(
                     HapticFeedbackConstants.VIRTUAL_KEY);
+
+            showToast("SPEED 3");
 
             sendIr(SPEED3);
         });
@@ -105,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
             v.performHapticFeedback(
                     HapticFeedbackConstants.VIRTUAL_KEY);
 
+            showToast("SPEED 4");
+
             sendIr(SPEED4);
         });
 
@@ -112,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
 
             v.performHapticFeedback(
                     HapticFeedbackConstants.VIRTUAL_KEY);
+
+            showToast("SPEED 5");
 
             sendIr(SPEED5);
         });
@@ -121,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
             v.performHapticFeedback(
                     HapticFeedbackConstants.VIRTUAL_KEY);
 
+            showToast("BOOST");
+
             sendIr(BOOST);
         });
 
@@ -128,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
 
             v.performHapticFeedback(
                     HapticFeedbackConstants.VIRTUAL_KEY);
+
+            showToast("TIMER");
 
             sendIr(TIMER);
         });
@@ -137,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
             v.performHapticFeedback(
                     HapticFeedbackConstants.VIRTUAL_KEY);
 
+            showToast("LED");
+
             // LED command not discovered yet
         });
 
@@ -144,6 +162,8 @@ public class MainActivity extends AppCompatActivity {
 
             v.performHapticFeedback(
                     HapticFeedbackConstants.VIRTUAL_KEY);
+
+            showToast("SLEEP");
 
             sendIr(SLEEP);
         });
