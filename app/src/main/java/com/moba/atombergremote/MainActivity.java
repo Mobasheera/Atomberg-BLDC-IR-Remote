@@ -10,6 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private ConsumerIrManager irManager;
+    private static final long POWER  = 0x6E91F300L;
+    private static final long SPEED1 = 0x748BF300L;
+    private static final long SPEED2 = 0x6F90F300L;
+    private static final long SPEED3 = 0x758AF300L;
+    private static final long SPEED4 = 0x6C93F300L;
+    private static final long SPEED5 = 0x7788F300L;
+    private static final long BOOST  = 0x708FF300L;
+    private static final long TIMER  = 0x6996F300L;
+    private static final long SLEEP  = 0x718EF300L;
 
     Button powerButton;
     Button speed1Button;
@@ -58,38 +67,54 @@ public class MainActivity extends AppCompatActivity {
 
         // TEST CLICK LISTENERS
 
-        powerButton.setOnClickListener(v ->
-                showToast("POWER"));
+        powerButton.setOnClickListener(v -> {
+            showToast("POWER");
+            sendIr(POWER);
+        });
 
-        speed1Button.setOnClickListener(v ->
-                showToast("SPEED 1"));
+        speed1Button.setOnClickListener(v -> {
+            showToast("SPEED 1");
+            sendIr(SPEED1);
+        });
 
-        speed2Button.setOnClickListener(v ->
-                showToast("SPEED 2"));
+        speed2Button.setOnClickListener(v -> {
+            showToast("SPEED 2");
+            sendIr(SPEED2);
+        });
 
-        speed3Button.setOnClickListener(v ->
-                showToast("SPEED 3"));
+        speed3Button.setOnClickListener(v -> {
+            showToast("SPEED 3");
+            sendIr(SPEED3);
+        });
 
-        speed4Button.setOnClickListener(v ->
-                showToast("SPEED 4"));
+        speed4Button.setOnClickListener(v -> {
+            showToast("SPEED 4");
+            sendIr(SPEED4);
+        });
 
-        speed5Button.setOnClickListener(v ->
-                showToast("SPEED 5"));
+        speed5Button.setOnClickListener(v -> {
+            showToast("SPEED 5");
+            sendIr(SPEED5);
+        });
 
-        boostButton.setOnClickListener(v ->
-                showToast("BOOST"));
+        boostButton.setOnClickListener(v -> {
+            showToast("BOOST");
+            sendIr(BOOST);
+        });
 
-        timerButton.setOnClickListener(v ->
-                showToast("TIMER"));
+        timerButton.setOnClickListener(v -> {
+            showToast("TIMER");
+            sendIr(TIMER);
+        });
 
-        ledButton.setOnClickListener(v ->
-                showToast("LED"));
+        ledButton.setOnClickListener(v -> {
+            showToast("LED");
+            // No LED code assigned yet
+        });
 
         sleepButton.setOnClickListener(v -> {
-
             showToast("SLEEP");
-
-            sendIr(0x718EF300L);
+            sendIr(SLEEP);
         });
     }
 
