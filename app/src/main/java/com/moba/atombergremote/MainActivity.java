@@ -1,5 +1,6 @@
 package com.moba.atombergremote;
 
+import android.hardware.ConsumerIrManager;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -7,6 +8,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ConsumerIrManager irManager;
 
     Button powerButton;
     Button speed1Button;
@@ -23,6 +26,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // IR BLASTER DETECTION
+
+        irManager = (ConsumerIrManager) getSystemService(CONSUMER_IR_SERVICE);
+
+        if (irManager == null) {
+            Toast.makeText(this,
+                    "IR Blaster NOT detected",
+                    Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this,
+                    "IR Blaster detected",
+                    Toast.LENGTH_LONG).show();
+        }
 
         // CONNECT BUTTONS
 
