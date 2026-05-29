@@ -4,6 +4,7 @@ import android.hardware.ConsumerIrManager;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
+import android.view.HapticFeedbackConstants;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -68,52 +69,82 @@ public class MainActivity extends AppCompatActivity {
         // TEST CLICK LISTENERS
 
         powerButton.setOnClickListener(v -> {
-            showToast("POWER");
+
+            v.performHapticFeedback(
+                    HapticFeedbackConstants.VIRTUAL_KEY);
+
             sendIr(POWER);
         });
 
         speed1Button.setOnClickListener(v -> {
-            showToast("SPEED 1");
+
+            v.performHapticFeedback(
+                    HapticFeedbackConstants.VIRTUAL_KEY);
+
             sendIr(SPEED1);
         });
 
         speed2Button.setOnClickListener(v -> {
-            showToast("SPEED 2");
+
+            v.performHapticFeedback(
+                    HapticFeedbackConstants.VIRTUAL_KEY);
+
             sendIr(SPEED2);
         });
 
         speed3Button.setOnClickListener(v -> {
-            showToast("SPEED 3");
+
+            v.performHapticFeedback(
+                    HapticFeedbackConstants.VIRTUAL_KEY);
+
             sendIr(SPEED3);
         });
 
         speed4Button.setOnClickListener(v -> {
-            showToast("SPEED 4");
+
+            v.performHapticFeedback(
+                    HapticFeedbackConstants.VIRTUAL_KEY);
+
             sendIr(SPEED4);
         });
 
         speed5Button.setOnClickListener(v -> {
-            showToast("SPEED 5");
+
+            v.performHapticFeedback(
+                    HapticFeedbackConstants.VIRTUAL_KEY);
+
             sendIr(SPEED5);
         });
 
         boostButton.setOnClickListener(v -> {
-            showToast("BOOST");
+
+            v.performHapticFeedback(
+                    HapticFeedbackConstants.VIRTUAL_KEY);
+
             sendIr(BOOST);
         });
 
         timerButton.setOnClickListener(v -> {
-            showToast("TIMER");
+
+            v.performHapticFeedback(
+                    HapticFeedbackConstants.VIRTUAL_KEY);
+
             sendIr(TIMER);
         });
 
         ledButton.setOnClickListener(v -> {
-            showToast("LED");
-            // No LED code assigned yet
+
+            v.performHapticFeedback(
+                    HapticFeedbackConstants.VIRTUAL_KEY);
+
+            // LED command not discovered yet
         });
 
         sleepButton.setOnClickListener(v -> {
-            showToast("SLEEP");
+
+            v.performHapticFeedback(
+                    HapticFeedbackConstants.VIRTUAL_KEY);
+
             sendIr(SLEEP);
         });
     }
