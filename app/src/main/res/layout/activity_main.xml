@@ -35,7 +35,7 @@
             android:layout_height="55dp"
             android:layout_marginTop="22dp"
             android:layout_marginStart="180dp"
-            android:background="#55FF0000"
+            android:background="@android:color/transparent"
             android:text="" />
 
         <!-- TEST SPEED1 BUTTON -->
@@ -45,7 +45,7 @@
             android:layout_height="45dp"
             android:layout_gravity="top|center_horizontal"
             android:layout_marginTop="110dp"
-            android:background="#55FF0000"
+            android:background="@android:color/transparent"
             android:text="" />
 
         <!-- TEST SPEED2 BUTTON -->
@@ -55,7 +55,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="155dp"
             android:layout_marginStart="190dp"
-            android:background="#55FF0000"
+            android:background="@android:color/transparent"
             android:text="" />
 
         <!-- TEST SPEED3 BUTTON -->
@@ -65,7 +65,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="220dp"
             android:layout_marginStart="160dp"
-            android:background="#55FF0000"
+            android:background="@android:color/transparent"
             android:text="" />
 
         <!-- TEST SPEED4 BUTTON -->
@@ -75,7 +75,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="220dp"
             android:layout_marginStart="95dp"
-            android:background="#55FF0000"
+            android:background="@android:color/transparent"
             android:text="" />
 
         <!-- TEST SPEED5 BUTTON -->
@@ -85,7 +85,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="155dp"
             android:layout_marginStart="60dp"
-            android:background="#55FF0000"
+            android:background="@android:color/transparent"
             android:text="" />
 
         <!-- TEST BOOST BUTTON -->
@@ -95,7 +95,7 @@
             android:layout_height="55dp"
             android:layout_gravity="top|center_horizontal"
             android:layout_marginTop="160dp"
-            android:background="#55FF0000"
+            android:background="@android:color/transparent"
             android:text="" />
 
         <!-- TEST TIMER BUTTON -->
@@ -105,7 +105,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="290dp"
             android:layout_marginStart="55dp"
-            android:background="#5500FF00"
+            android:background="@android:color/transparent"
             android:text="" />
 
         <!-- TEST LED BUTTON -->
@@ -115,7 +115,7 @@
             android:layout_height="50dp"
             android:layout_gravity="top|center_horizontal"
             android:layout_marginTop="290dp"
-            android:background="#55FF0000"
+            android:background="@android:color/transparent"
             android:text="" />
 
         <!-- TEST SLEEP BUTTON -->
@@ -125,7 +125,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="290dp"
             android:layout_marginStart="192dp"
-            android:background="#550000FF"
+            android:background="@android:color/transparent"
             android:text="" />
 
     </FrameLayout>
