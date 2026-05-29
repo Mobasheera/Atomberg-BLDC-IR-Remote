@@ -85,11 +85,54 @@ public class MainActivity extends AppCompatActivity {
         ledButton.setOnClickListener(v ->
                 showToast("LED"));
 
-        sleepButton.setOnClickListener(v ->
-                showToast("SLEEP"));
+        sleepButton.setOnClickListener(v -> {
+
+            showToast("SLEEP");
+
+            sendIr(0x718EF300L);
+        });
     }
 
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
+
+    private int[] buildNecSignal(long code) {
+
+        int[] pattern = new int[67];
+
+        pattern[0] = 9000;
+        pattern[1] = 4500;
+
+        for (int i = 0; i < 32; i++) {
+
+            pattern[2 + (i * 2)] = 560;
+
+            if (((code >> i) & 1) == 1) {
+                pattern[3 + (i * 2)] = 1690;
+            } else {
+                pattern[3 + (i * 2)] = 560;
+            }
+        }
+
+        pattern[66] = 560;
+
+        return pattern;
+    }
+
+    private void sendIr(long code) {
+
+        if (irManager == null) {
+            Toast.makeText(this,
+                    "No IR Blaster",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        irManager.transmit(
+                38000,
+                buildNecSignal(code)
+        );
+    }
+
 }
