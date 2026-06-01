@@ -177,3 +177,80 @@ git clone https://github.com/Mobasheera/Atomberg-BLDC-IR-Remote.git
 4. The command is transmitted immediately.
 
 For supported commands, refer to the **Supported Functions** section above.
+
+## How It Works
+
+The application uses Android's `ConsumerIrManager` API to access the infrared transmitter available on supported devices.
+
+When a button is pressed:
+
+1. The application generates an NEC-format infrared packet.
+2. The packet is encoded using the verified Atomberg command code.
+3. The signal is transmitted at a carrier frequency of 38 kHz.
+4. The fan receives and decodes the command.
+5. The corresponding action is executed by the fan.
+
+The application performs all signal generation locally and does not require:
+
+* Internet connectivity
+* Bluetooth
+* Wi-Fi
+* External hardware
+
+---
+
+## IR Protocol Details
+
+### Protocol
+
+| Parameter         | Value     |
+| ----------------- | --------- |
+| Protocol          | NEC       |
+| Carrier Frequency | 38 kHz    |
+| Bit Order         | LSB First |
+| Data Length       | 32-bit    |
+
+### Timing Parameters
+
+| Parameter     | Value   |
+| ------------- | ------- |
+| Header Mark   | 9000 µs |
+| Header Space  | 4500 µs |
+| Bit Mark      | 560 µs  |
+| Logic 0 Space | 560 µs  |
+| Logic 1 Space | 1690 µs |
+| Trailer Mark  | 560 µs  |
+
+### Command Structure
+
+The application dynamically generates NEC infrared packets using the verified Atomberg command values.
+
+Example:
+
+```text
+POWER = 6E91F300
+SLEEP = 718EF300
+BOOST = 708FF300
+```
+
+The generated pulse train is transmitted using Android's ConsumerIrManager API at 38 kHz.
+
+### Reverse Engineering Notes
+
+The initial Atomberg IR command set was referenced from Glen Zac's research on Atomberg BLDC fan infrared codes:
+
+https://glenzac.wordpress.com/2020/03/25/atomberg-gorilla-efficio-bldc-fan-ir-remote-codes/
+
+While validating the command set on real hardware, the published Sleep command was found to be non-functional on the tested fan. The Sleep command included in this project was independently reverse engineered, verified, and tested on an Atomberg Erica Meta fan.
+
+Additional undocumented NEC commands were also discovered during testing. These commands were found to control the fan's LED indicator states and appear to expose functionality intended for diagnostics, servicing, or manufacturing use.
+
+Discovered undocumented commands:
+
+| Function | NEC Code   |
+| -------- | ---------- |
+| 1 LED    | `7A85F300` |
+| 2 LED    | `7986F300` |
+| 6 LED    | `738CF300` |
+
+These commands are intentionally excluded from the application because their behavior has not been fully documented or validated across all supported Atomberg fan models.
