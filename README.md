@@ -254,3 +254,36 @@ Discovered undocumented commands:
 | 6 LED    | `738CF300` |
 
 These commands are intentionally excluded from the application because their behavior has not been fully documented or validated across all supported Atomberg fan models.
+
+## Project Structure
+
+```text
+AtombergIRRemote/
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/moba/atombergremote/
+│   │   │   │       └── MainActivity.java
+│   │   │   ├── res/
+│   │   │   │   ├── drawable/
+│   │   │   │   │   ├── remote.png
+│   │   │   │   │   └── ic_launcher.*
+│   │   │   │   ├── layout/
+│   │   │   │   │   └── activity_main.xml
+│   │   │   │   └── mipmap/
+│   │   │   └── AndroidManifest.xml
+│   └── build.gradle
+└── README.md
+```
+
+### Key Components
+
+| Component         | Purpose                                         |
+| ----------------- | ----------------------------------------------- |
+| MainActivity.java | Handles button interactions and IR transmission |
+| activity_main.xml | Defines the remote control user interface       |
+| remote.png        | Remote control image used as the UI background  |
+| ConsumerIrManager | Android API used for infrared transmission      |
+
+---
