@@ -1,4 +1,6 @@
-## Overview
+<img width="920" height="649" alt="IR Remote" src="https://github.com/user-attachments/assets/5be67652-fd3f-45b5-bef5-b08afd9b58c2" />
+
+## Atomberg IR Remote
 
 Atomberg BLDC IR Remote is an open-source Android application that allows compatible smartphones with an infrared (IR) blaster to control Atomberg BLDC ceiling fans.
 
