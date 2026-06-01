@@ -84,17 +84,64 @@ The following functions have been verified and tested with Atomberg BLDC fans:
 
 This application requires an Android device equipped with a built-in infrared (IR) blaster.
 
-### Tested Hardware
+### Tested Devices
 
 | Device            | Status   |
 | ----------------- | -------- |
 | Redmi Note 10 Pro | ✅ Tested |
+| Redmi Note 8 Pro  | ✅ Tested |
 
 ### Fan Compatibility
 
-The application has been tested with Atomberg BLDC fans using the verified NEC infrared command set.
+The following Atomberg fan series are known to use the supported IR command set:
 
-Compatibility with other Atomberg fan models may vary and has not yet been fully verified.
+#### Aris Series
+
+* Aris
+* Aris Smart
+* Aris Starlight
+* Aris Starlight Smart
+* Aris Contour
+* Aris Gladius
+* Aris Gladius Smart
+
+#### Studio Series
+
+* Studio+
+* Studio Smart+
+* Studio Nexus
+
+#### Erica Series
+
+* Erica
+* Erica Smart
+* Erica Meta
+* Erica Nuvo
+
+#### Renesa Series
+
+* Renesa+
+* Renesa Smart+
+* Renesa Prime Remote
+* Renesa Elite
+* Renesa Halo
+
+#### Other Models
+
+* Ikano
+* Efficio
+* Efficio 2
+* Efficio Prime
+
+### Verified Hardware
+
+The application has been personally tested and verified with:
+
+* Atomberg Erica Meta
+* Redmi Note 10 Pro
+* Redmi Note 8 Pro
+
+Compatibility with additional supported models is based on the shared IR command set and community verification.
 
 ---
 
@@ -102,11 +149,10 @@ Compatibility with other Atomberg fan models may vary and has not yet been fully
 
 ### Option 1: Download APK
 
-1. Navigate to the latest release on GitHub.
-2. Download the APK file.
-3. Transfer the APK to your Android device if required.
-4. Install the APK.
-5. Allow installation from unknown sources if prompted.
+1. Download the latest APK from the GitHub Releases page.
+2. Transfer the APK to your Android device if required.
+3. Install the APK.
+4. Allow installation from unknown sources if prompted.
 
 ### Option 2: Build From Source
 
@@ -126,25 +172,8 @@ git clone https://github.com/Mobasheera/Atomberg-BLDC-IR-Remote.git
 ## Usage
 
 1. Open the application.
-2. Point the phone's IR emitter towards the fan receiver.
-3. Tap the desired control button.
-4. The command will be transmitted immediately.
+2. Point the phone's IR emitter toward the fan receiver.
+3. Press the desired button on the virtual remote.
+4. The command is transmitted immediately.
 
-### Available Controls
-
-* Power
-* Speed 1
-* Speed 2
-* Speed 3
-* Speed 4
-* Speed 5
-* Boost
-* Timer
-* Sleep
-
-### Notes
-
-* The application does not require internet access.
-* No account or sign-in is required.
-* Commands are transmitted directly using the phone's IR hardware.
-* Haptic feedback is provided on supported devices.
+For supported commands, refer to the **Supported Functions** section above.
