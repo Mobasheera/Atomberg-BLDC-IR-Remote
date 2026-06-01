@@ -237,9 +237,7 @@ The generated pulse train is transmitted using Android's ConsumerIrManager API a
 
 ### Reverse Engineering Notes
 
-The initial Atomberg IR command set was referenced from Glen Zac's research on Atomberg BLDC fan infrared codes:
-
-https://glenzac.wordpress.com/2020/03/25/atomberg-gorilla-efficio-bldc-fan-ir-remote-codes/
+The initial Atomberg IR command set was referenced from [Glen Zac's research](https://glenzac.wordpress.com/2020/03/25/atomberg-gorilla-efficio-bldc-fan-ir-remote-codes/) on Atomberg BLDC fan infrared codes:
 
 While validating the command set on real hardware, the published Sleep command was found to be non-functional on the tested fan. The Sleep command included in this project was independently reverse engineered, verified, and tested on an Atomberg Erica Meta fan.
 
@@ -287,3 +285,27 @@ AtombergIRRemote/
 | ConsumerIrManager | Android API used for infrared transmission      |
 
 ---
+
+## License
+
+This project is licensed under the MIT License.
+
+You are free to use, modify, distribute, and adapt this project in accordance with the terms of the license.
+
+See the [LICENSE file](https://github.com/Mobasheera/Atomberg-BLDC-IR-Remote/blob/main/LICENSE) for details.
+
+---
+
+## Acknowledgements
+
+Special thanks to:
+
+* Glen Zac for documenting Atomberg BLDC fan infrared commands and protocol information that served as the initial reference for this project.
+
+* The Android Open Source Project (AOSP) for providing the ConsumerIrManager API.
+
+* The Atomberg user community for sharing compatibility information and testing results across multiple fan models.
+
+### Project Contributions
+
+Additional protocol validation, command verification, Sleep command reverse engineering, Android implementation, testing, and documentation were performed as part of this project.
