@@ -323,3 +323,10 @@ Special thanks to:
 ### Project Contributions
 
 Additional protocol validation, command verification, Sleep command reverse engineering, Android implementation, testing, and documentation were performed as part of this project.
+
+## Author
+
+Developed and maintained by **Mobashshir Ahsan (Mobasheera)**.
+
+* GitHub: https://github.com/Mobasheera
+* Linktree: https://linktr.ee/mobashshir
