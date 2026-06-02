@@ -76,18 +76,6 @@ The following functions have been verified and tested with Atomberg BLDC fans:
 | Timer    | `6996F300` |
 | Sleep    | `718EF300` |
 
-### IR Protocol Details
-
-* Protocol: NEC
-* Carrier Frequency: 38 kHz
-* Bit Order: LSB First
-* Header Mark: 9000 µs
-* Header Space: 4500 µs
-* Bit Mark: 560 µs
-* Logic 0 Space: 560 µs
-* Logic 1 Space: 1690 µs
-* Trailer Mark: 560 µs
-
 ## Requirements
 
 ### Supported Devices
