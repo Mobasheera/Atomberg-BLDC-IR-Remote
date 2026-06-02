@@ -259,7 +259,7 @@ These commands are intentionally excluded from the application because their beh
 ## Project Structure
 
 ```text
-AtombergIRRemote/
+Atomberg-BLDC-IR-Remote/
 ├── app/
 │   ├── src/
 │   │   ├── main/
@@ -269,23 +269,34 @@ AtombergIRRemote/
 │   │   │   ├── res/
 │   │   │   │   ├── drawable/
 │   │   │   │   │   ├── remote.png
-│   │   │   │   │   └── ic_launcher.*
+│   │   │   │   │   └── launcher icons
 │   │   │   │   ├── layout/
 │   │   │   │   │   └── activity_main.xml
 │   │   │   │   └── mipmap/
 │   │   │   └── AndroidManifest.xml
-│   └── build.gradle
-└── README.md
+│   │   └── build.gradle
+│
+├── remote-configs/
+│   ├── Atomberg_Fan.irplus
+│   └── irblaster_backup_1780420947147.json
+│
+├── README.md
+├── LICENSE
+├── build.gradle.kts
+├── settings.gradle.kts
+└── gradle/
 ```
 
 ### Key Components
 
-| Component         | Purpose                                         |
-| ----------------- | ----------------------------------------------- |
-| MainActivity.java | Handles button interactions and IR transmission |
-| activity_main.xml | Defines the remote control user interface       |
-| remote.png        | Remote control image used as the UI background  |
-| ConsumerIrManager | Android API used for infrared transmission      |
+| Component                           | Purpose                                                            |
+| ----------------------------------- | ------------------------------------------------------------------ |
+| MainActivity.java                   | Handles button interactions and NEC IR transmission                |
+| activity_main.xml                   | Defines the remote control user interface                          |
+| remote.png                          | Background image used to replicate the original Atomberg remote    |
+| ConsumerIrManager                   | Android API used for infrared transmission                         |
+| Atomberg_Fan.irplus                 | IRplus configuration containing verified Atomberg NEC commands     |
+| irblaster_backup_1780420947147.json | IR Blaster Remote backup containing verified Atomberg NEC commands |
 
 ---
 
