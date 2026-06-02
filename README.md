@@ -152,7 +152,7 @@ Compatibility with additional supported models is based on the shared IR command
 
 ## Installation
 
-1. Download the latest APK from the Releases page.
+1. Download the latest APK from the [Releases](https://github.com/Mobasheera/Atomberg-BLDC-IR-Remote/releases/latest) page.
 2. Install the APK on an Android device with an IR blaster.
 3. Launch the application and begin controlling your fan.
 
