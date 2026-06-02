@@ -156,6 +156,18 @@ Compatibility with additional supported models is based on the shared IR command
 2. Install the APK on an Android device with an IR blaster.
 3. Launch the application and begin controlling your fan.
 
+## Alternative Remote Configurations
+
+For users who prefer third-party infrared remote applications, this repository also provides preconfigured remote profiles containing the same verified Atomberg NEC command set used by this application.
+
+### Downloads
+
+* [IRplus Configuration](https://github.com/Mobasheera/Atomberg-BLDC-IR-Remote/blob/main/remote-configs/Atomberg_Fan.irplus)
+* [IR Blaster Remote Backup](https://github.com/Mobasheera/Atomberg-BLDC-IR-Remote/blob/main/remote-configs/irblaster_backup_1780420947147.json)
+
+These files can be imported directly into their respective applications and provide an alternative method of controlling compatible Atomberg BLDC fans.
+
+
 ---
 
 ## Usage
