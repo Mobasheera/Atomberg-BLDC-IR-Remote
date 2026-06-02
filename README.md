@@ -1,4 +1,9 @@
 <img width="920" height="649" alt="IR Remote" src="https://github.com/user-attachments/assets/5be67652-fd3f-45b5-bef5-b08afd9b58c2" />
+<p align="center">
+Open-source Android IR remote for Atomberg BLDC fans using verified NEC infrared commands.
+</p>
+
+
 
 ## Overview
 
@@ -135,9 +140,11 @@ The following Atomberg fan series are known to use the supported IR command set:
 
 The application has been personally tested and verified with:
 
-* Atomberg Erica Meta
-* Redmi Note 10 Pro
-* Redmi Note 8 Pro
+| Component | Model |
+|------------|------------|
+| Fan | Atomberg Erica Meta |
+| Phone | Redmi Note 10 Pro |
+| Phone | Redmi Note 8 Pro |
 
 Compatibility with additional supported models is based on the shared IR command set and community verification.
 
@@ -224,6 +231,8 @@ The initial Atomberg IR command set was referenced from [Glen Zac's research](ht
 While validating the command set on real hardware, the published Sleep command was found to be non-functional on the tested fan. The Sleep command included in this project was independently reverse engineered, verified, and tested on an Atomberg Erica Meta fan.
 
 Additional undocumented NEC commands were also discovered during testing. These commands were found to control the fan's LED indicator states and appear to expose functionality intended for diagnostics, servicing, or manufacturing use.
+
+The Sleep command included in this application was independently reverse engineered and validated on an Atomberg Erica Meta fan after the originally documented command failed to operate correctly during testing.
 
 Discovered undocumented commands:
 
