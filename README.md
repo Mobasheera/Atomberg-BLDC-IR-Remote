@@ -30,8 +30,8 @@ The current version supports essential fan controls including power, speed selec
 ### Main Interface
 
 <p align="center">
-  <img width="326" height="700" alt="app_ss"
-       src="https://github.com/user-attachments/assets/7c43965e-1b9b-4895-bc72-fe8638249219">
+  <img width="326" alt="Main Interface"
+       src="https://github.com/user-attachments/assets/0bb274f1-9b56-423a-96bd-9a9a741a3fae">
 </p>
 
 <p align="center">
