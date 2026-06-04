@@ -1,9 +1,7 @@
-<img width="920" height="649" alt="IR Remote" src="https://github.com/user-attachments/assets/5be67652-fd3f-45b5-bef5-b08afd9b58c2" />
+<img width="920" height="649" alt="IR Remote" src="https://github.com/user-attachments/assets/97cf985c-6e83-45ea-a4f7-8c78adc99a03" />
 <p align="center">
 Open-source Android IR remote for Atomberg BLDC fans using verified NEC infrared commands.
 </p>
-
-
 
 ## Overview
 
