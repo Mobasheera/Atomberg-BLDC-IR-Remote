@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
     private static final long TIMER  = 0x6996F300L;
     private static final long SLEEP  = 0x718EF300L;
 
+    // Published MSB-first 00CFE916, bit-reversed for the LSB-first encoder.
+    // https://glenzac.wordpress.com/2020/03/25/atomberg-gorilla-efficio-bldc-fan-ir-remote-codes/
+    static final long LED = 0x6897F300L;
+
     Button powerButton;
     Button speed1Button;
     Button speed2Button;
@@ -155,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
             showToast("LED");
 
-            // LED command not discovered yet
+            sendIr(LED);
         });
 
         sleepButton.setOnClickListener(v -> {
@@ -173,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
-    private int[] buildNecSignal(long code) {
+    static int[] buildNecSignal(long code) {
 
         int[] pattern = new int[67];
 

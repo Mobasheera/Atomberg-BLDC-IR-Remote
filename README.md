@@ -63,7 +63,7 @@ The following functions have been verified and tested with Atomberg BLDC fans:
 | Boost Mode  | ✅ Supported       |
 | Timer Mode  | ✅ Supported       |
 | Sleep Mode  | ✅ Supported       |
-| LED Control | ❌ Not implemented |
+| LED Control | ✅ Supported       |
 
 ### Verified NEC Commands
 
@@ -78,6 +78,7 @@ The following functions have been verified and tested with Atomberg BLDC fans:
 | Boost    | `708FF300` |
 | Timer    | `6996F300` |
 | Sleep    | `718EF300` |
+| LED      | `6897F300` |
 
 ## Requirements
 
@@ -239,6 +240,20 @@ The generated pulse train is transmitted using Android's ConsumerIrManager API a
 The initial Atomberg IR command set was referenced from [Glen Zac's research](https://glenzac.wordpress.com/2020/03/25/atomberg-gorilla-efficio-bldc-fan-ir-remote-codes/) on Atomberg BLDC fan infrared codes:
 
 While validating the command set on real hardware, the published Sleep command was found to be non-functional on the tested fan. The Sleep command included in this project was independently reverse engineered, verified, and tested on an Atomberg Erica Meta fan.
+
+### LED toggle validation
+
+The LED button sends `6897F300` (32-bit NEC, LSB first, 38 kHz), using the same
+`F300` address as the other fan commands. It is the full bit reversal of the
+MSB-first `00CFE916` capture shared by Pramod Ghuge on February 22, 2025 in
+[Glen Zac's research comments](https://glenzac.wordpress.com/2020/03/25/atomberg-gorilla-efficio-bldc-fan-ir-remote-codes/).
+The previous IRplus LED profile encoded `E916CF00`, which byte-swapped the
+published value instead of reversing its bits. The profile now matches the app.
+
+A community tester confirmed the corrected waveform toggles the LED indicators
+on an Atomberg Renesa 1200 mm using a Realme GT 7T (Android 16). This verifies that
+combination; it does not establish LED compatibility with every model listed above.
+This is the normal LED toggle, separate from the diagnostic LED commands below.
 
 Additional undocumented NEC commands were also discovered during testing. These commands were found to control the fan's LED indicator states and appear to expose functionality intended for diagnostics, servicing, or manufacturing use.
 
